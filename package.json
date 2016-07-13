@@ -1,0 +1,37 @@
+{
+  "name": "jwalker",
+  "version": "1.0.0",
+  "description": "A JSON pretty-printer for each line in a stream. Useful for JSON logs.",
+  "main": "index.js",
+  "bin": {
+    "jwalker": "./index.js"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trenskow/jwalker.git"
+  },
+  "keywords": [
+    "JSON",
+    "lint",
+    "pretty",
+    "print",
+    "line",
+    "readline",
+    "log",
+    "logs",
+    "stream"
+  ],
+  "author": "Kristian Trenskow <trenskow@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trenskow/jwalker/issues"
+  },
+  "homepage": "https://github.com/trenskow/jwalker#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
