@@ -16,8 +16,6 @@ const args = minimist(process.argv.slice(2), {
 	'--': false
 });
 
-console.log(args);
-
 const help = () => {
 
 	console.log('Usage: jwalker [options]');
