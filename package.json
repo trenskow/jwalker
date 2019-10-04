@@ -1,6 +1,6 @@
 {
   "name": "jwalker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A JSON pretty-printer for each line in a stream. Useful for JSON logs.",
   "main": "index.js",
   "bin": {

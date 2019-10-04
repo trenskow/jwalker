@@ -20,7 +20,7 @@ const help = () => {
 
 	console.log('Usage: jwalker [options]');
 	console.log();
-	console.log('  Use - (or omit) for stdin or stdout.');
+	console.log('  Use -- (or omit) for stdin or stdout.');
 	console.log();
 	console.log('  Options:');
 	console.log('    -i=[file], --input=[file]         Input file.');
@@ -50,7 +50,7 @@ line.on('line', line => {
 	try {
 		outputStream.write(JSON.stringify(JSON.parse(line), null, 4) + '\n', 'utf8');
 	} catch(err) {
-		console.warn('Unable to parse line: ' + line);
+		outputStream.write(line + '\n');
 		if (exits) process.exit(1);
 	}
 });
