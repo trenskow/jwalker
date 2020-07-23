@@ -30,8 +30,8 @@ const help = () => {
 	console.info('  Use -- (or omit) for stdin or stdout.');
 	console.info();
 	console.info('  Options:');
-	console.info('    -i=[file], --input=[file]         Input file.');
-	console.info('    -o=[file], --output=[file]        Output file.');
+	console.info('    -i=[file], --input=[file]         Input file (-- for stdin) (default=stdin).');
+	console.info('    -o=[file], --output=[file]        Output file (-- for stdout) (default=stdout).');
 	console.info('    -p, --passthrough                 Passthrough non-JSON.');
 	console.info('    -s=[spaces], --spaces=[spaces]    Number of spaces per indentation (default=4).');
 	console.info();

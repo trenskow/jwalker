@@ -13,8 +13,8 @@ Using jwalker on the command line.
 		Use -- (or omit) for stdin or stdout.
 	
 		Options:
-			-i=[file], --input=[file]         Input file.
-			-o=[file], --output=[file]        Output file.
+			-i=[file], --input=[file]         Input file (-- for stdin) (default=stdin).
+			-o=[file], --output=[file]        Output file (-- for stdout) (default=stdout).
 			-p, --passthrough                 Passthrough non-JSON.
 			-s=[spaces], --spaces=[spaces]    Number of spaces per indentation (default=4).
 ````
