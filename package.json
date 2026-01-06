@@ -1,39 +1,44 @@
 {
-  "name": "jwalker",
-  "version": "2.0.0",
-  "description": "A JSON pretty-printer for each line in a stream. Useful for JSON logs.",
-  "main": "index.js",
-  "bin": {
-    "jwalker": "./bin/index.js"
-  },
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trenskow/jwalker.git"
-  },
-  "keywords": [
-    "JSON",
-    "lint",
-    "pretty",
-    "print",
-    "line",
-    "readline",
-    "log",
-    "logs",
-    "stream"
-  ],
-  "author": "Kristian Trenskow <trenskow@me.com>",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/trenskow/jwalker/issues"
-  },
-  "homepage": "https://github.com/trenskow/jwalker#readme",
-  "devDependencies": {
-    "eslint": "^7.5.0"
-  },
-  "dependencies": {
-    "minimist": "^1.2.5"
-  }
+	"name": "jwalker",
+	"version": "2.0.0",
+	"description": "A JSON pretty-printer for each line in a stream. Useful for JSON logs.",
+	"main": "index.js",
+	"type": "module",
+	"bin": {
+		"jwalker": "./bin/index.js"
+	},
+	"scripts": {
+		"test": "./node_modules/mocha/bin/mocha test/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/trenskow/jwalker.git"
+	},
+	"keywords": [
+		"JSON",
+		"lint",
+		"pretty",
+		"print",
+		"line",
+		"readline",
+		"log",
+		"logs",
+		"stream"
+	],
+	"author": "Kristian Trenskow <trenskow@me.com>",
+	"license": "BSD-3-Clause",
+	"bugs": {
+		"url": "https://github.com/trenskow/jwalker/issues"
+	},
+	"homepage": "https://github.com/trenskow/jwalker#readme",
+	"devDependencies": {
+		"@eslint/compat": "^2.0.0",
+		"@eslint/eslintrc": "^3.3.3",
+		"@eslint/js": "^9.39.2",
+		"eslint": "^9.39.2",
+		"globals": "^17.0.0"
+	},
+	"dependencies": {
+		"@trenskow/arguments-parser": "^0.3.54"
+	}
 }

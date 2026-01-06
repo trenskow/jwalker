@@ -1,50 +1,38 @@
 #!/usr/bin/env node
 
-'use strict';
+import fs from 'fs';
 
-const
-	fs = require('fs');
+import argumentsParser from '@trenskow/arguments-parser';
 
-const
-	minimist = require('minimist');
+import JWalker from '../lib/index.js';
 
-const
-	JWalker = require('../lib');
+const {
+	input,
+	output,
+	spaces = '\t',
+	passthrough
+} = await argumentsParser().options({
+	'input': {
+		type: String,
+		default: '--',
+		description: 'Input file (-- for stdin).'
+	},
+	'output': {
+		type: String,
+		default: '--',
+		description: 'Output file (-- for stdout).'
+	},
+	'spaces': {
+		type: Number,
+		description: 'Use number of spaces for indentation (default is tab).'
+	},
+	'passthrough': {
+		type: Boolean,
+		default: false,
+		description: 'Passthrough non-JSON lines.'
+	}
+});
 
-const
-	args = minimist(process.argv.slice(2), {
-		alias: {
-			'h': 'help',
-			's': 'spaces',
-			'p': 'passthrough',
-			'i': 'input',
-			'o': 'output'
-		},
-		'--': false
-	});
-
-const help = () => {
-
-	console.info('Usage: jwalker [options]');
-	console.info();
-	console.info('  Use -- (or omit) for stdin or stdout.');
-	console.info();
-	console.info('  Options:');
-	console.info('    -i=[file], --input=[file]         Input file (-- for stdin) (default=stdin).');
-	console.info('    -o=[file], --output=[file]        Output file (-- for stdout) (default=stdout).');
-	console.info('    -p, --passthrough                 Passthrough non-JSON.');
-	console.info('    -s=[spaces], --spaces=[spaces]    Number of spaces per indentation (default=4).');
-	console.info();
-
-	process.exit(0);
-
-};
-
-if (args.help === true) return help();
-
-args.input = args.input || '--';
-args.output = args.output || '--';
-
-(args.input === '--' ? process.stdin : fs.createReadStream(args.input))
-	.pipe(new JWalker({ passthroughNonJSON: args.passthrough, spaces: args.spaces }))
-	.pipe((args.output === '--' ? process.stdout : fs.createWriteStream(args.output)));
+(input === '--' ? process.stdin : fs.createReadStream(input))
+	.pipe(new JWalker({ passthroughNonJSON: passthrough, spaces: spaces }))
+	.pipe((output === '--' ? process.stdout : fs.createWriteStream(output)));
