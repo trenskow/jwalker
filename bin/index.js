@@ -9,7 +9,7 @@ import JWalker from '../lib/index.js';
 const {
 	input,
 	output,
-	spaces = '\t',
+	spaces,
 	passthrough
 } = await argumentsParser().options({
 	'input': {
@@ -24,7 +24,8 @@ const {
 	},
 	'spaces': {
 		type: Number,
-		description: 'Use number of spaces for indentation (default is tab).'
+		default: '\t',
+		description: 'Use number of spaces for indentation.'
 	},
 	'passthrough': {
 		type: Boolean,
