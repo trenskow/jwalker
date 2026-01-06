@@ -8,15 +8,21 @@ Parses a file stream for JSON and pretty prints it.
 Using jwalker on the command line.
 
 ````
-	Usage: jwalker [options]
-	
-		Use -- (or omit) for stdin or stdout.
-	
-		Options:
-			-i=[file], --input=[file]         Input file (-- for stdin) (default=stdin).
-			-o=[file], --output=[file]        Output file (-- for stdout) (default=stdout).
-			-p, --passthrough                 Passthrough non-JSON.
-			-s=[spaces], --spaces=[spaces]    Number of spaces per indentation (default=4).
+Usage: index.js <options>
+
+Options:
+
+  --input <input>    Input file (-- for stdin).
+                     (default: `--`)
+
+  --output <output>  Output file (-- for stdout).
+                     (default: `--`)
+
+  --spaces <spaces>  Use number of spaces for indentation.
+                     (default: `        `)
+
+  --passthrough      Passthrough non-JSON lines.
+                     (default: disabled)
 ````
 
 # Usage (code)
