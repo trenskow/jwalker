@@ -39,6 +39,6 @@
 		"globals": "^17.3.0"
 	},
 	"dependencies": {
-		"@trenskow/arguments-parser": "^0.3.59"
+		"@trenskow/arguments-parser": "^0.3.60"
 	}
 }
