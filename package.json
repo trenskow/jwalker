@@ -32,13 +32,13 @@
 	},
 	"homepage": "https://github.com/trenskow/jwalker#readme",
 	"devDependencies": {
-		"@eslint/compat": "^2.0.2",
-		"@eslint/eslintrc": "^3.3.3",
+		"@eslint/compat": "^2.0.3",
+		"@eslint/eslintrc": "^3.3.5",
 		"@eslint/js": "^10.0.1",
-		"eslint": "^10.0.0",
-		"globals": "^17.3.0"
+		"eslint": "^10.1.0",
+		"globals": "^17.4.0"
 	},
 	"dependencies": {
-		"@trenskow/arguments-parser": "^0.3.64"
+		"@trenskow/arguments-parser": "^0.3.66"
 	}
 }
