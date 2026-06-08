@@ -35,10 +35,10 @@
 		"@eslint/compat": "^2.1.0",
 		"@eslint/eslintrc": "^3.3.5",
 		"@eslint/js": "^10.0.1",
-		"eslint": "^10.4.0",
+		"eslint": "^10.4.1",
 		"globals": "^17.6.0"
 	},
 	"dependencies": {
-		"@trenskow/arguments-parser": "^0.3.85"
+		"@trenskow/arguments-parser": "^0.3.94"
 	}
 }
