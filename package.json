@@ -36,9 +36,9 @@
 		"@eslint/eslintrc": "^3.3.6",
 		"@eslint/js": "^10.0.1",
 		"eslint": "^10.8.0",
-		"globals": "^17.8.0"
+		"globals": "^17.9.0"
 	},
 	"dependencies": {
-		"@trenskow/arguments-parser": "^0.3.125"
+		"@trenskow/arguments-parser": "^0.3.126"
 	}
 }
